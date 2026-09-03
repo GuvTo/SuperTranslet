@@ -204,6 +204,7 @@ def fun_final_deck(vLetraRepeticao: list, vTempoLetra: list, vRespostas: list, v
              bbox=dict(boxstyle='round', facecolor='white', alpha=0.8))
 
     iMatPlotLib_PyPlot.tight_layout()
+    iMatPlotLib.pyplot.savefig(f'adex_file_imagem_erx{str(np.random.randint(0, 1000000000))}edx')
     iMatPlotLib_PyPlot.show()
 
     # Retorna resultados para análise posterior
