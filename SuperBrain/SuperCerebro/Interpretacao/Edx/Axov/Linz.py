@@ -60,15 +60,20 @@ def fun_separar(fconteudo: str, fconjunto_tipo: str, fordem_conjuto_tipo: str):
         # tipo
 
         for xConjuto_tipo in range(len(vConjutoTipo)):
-            for xConteudoDrex in tConteudo:
-                if vConjutoTipo[xConjuto_tipo] == xConteudoDrex:
-                    fTipo += (vOrdem_conjuto_tipo[xConjuto_tipo]) + ';Sep:' #+ ' ' + tConteudo + ' ' + vConjutoTipo[xConjuto_tipo])
-                    fTipo_final += vConjutoTipo[xConjuto_tipo]
-                else:
-                    ...
+            for xConteudoDrex in vConjutoTipo[xConjuto_tipo]:
+                for xConteudoDrexFinal in tConteudo:
+                    if xConteudoDrexFinal == xConteudoDrex:
+                        fTipo += (vOrdem_conjuto_tipo[xConjuto_tipo]) + ';Sep:' #+ ' ' + tConteudo + ' ' + vConjutoTipo[xConjuto_tipo])
+                        fTipo_final += ';tipo:' + vConjutoTipo[xConjuto_tipo]
+
+
+
+                    else:
+                        ...
 
 
         # tipo
+
 
         vTipo.append(fTipo + ' ' + fTipo_final)#(fTipo + ' ' + tConteudo + ' ' + fTipo_final)
         fSubToken = fTipo + ' ' + tConteudo + ' ' + fTipo_final
@@ -159,8 +164,9 @@ if __name__ == '__main__':
         print(f"  A[{i}] = '{elementos_A[i]}'  ->  B[{i}] = '{elementos_B[i]}'")
 
     #
-
-    fconteudo = '1+1=2 OLA'
+    A = 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z ' + '0 1 2 3 4 5 6 7 8 9 ' + '+ - * / ^ % = ' + '.'
+    B = 'letra_maiuscula '*26 + 'letra_minuscula '*26 + 'numero '*9 + 'operação '*7 + 'lingua'
+    fconteudo = '1 + 1 = 2 O L A'
     fconjuto_tipo = A
     fordem_conjuto_tipo = B
 
