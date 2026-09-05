@@ -1,0 +1,44 @@
+{
+  "timestamp": "20260903_182303",
+  "config": {
+    "letras": [
+      "1+1=2",
+      "2+2=4",
+      "1+2=3",
+      "2+3=5",
+      "a+b=",
+      "x+y=",
+      "a+b=c",
+      "x+y=z"
+    ],
+    "respostas": [
+      "1+1=2",
+      "2+2=4",
+      "1+2=3"
+    ],
+    "ordem": {
+      "1+1=2": 1,
+      "2+2=4": 2,
+      "1+2=3": 3,
+      "2+3=5": 4,
+      "a+b=": 5,
+      "x+y=": 6,
+      "a+b=c": 7,
+      "x+y=z": 1
+    },
+    "mm_curto": 2,
+    "mm_longo": 10,
+    "macd_fast": 12,
+    "macd_slow": 26,
+    "macd_signal": 9,
+    "save_dir": "C:\\Users\\yytol\\PycharmProjects\\SuperTranslet\\Exwex\\Adx\\Edx\\Opx\\resultados",
+    "filename": "",
+    "save_hist": true,
+    "lang": "portugues"
+  },
+  "resumo": {
+    "num_pontos": 3,
+    "ultimo_valor": 3,
+    "ultimo_macd": 0.22113456871291648
+  }
+}
