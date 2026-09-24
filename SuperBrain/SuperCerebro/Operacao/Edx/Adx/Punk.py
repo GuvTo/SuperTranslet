@@ -23,13 +23,21 @@ def fun_resposta(fconteudo_aprender,fParaA, fParaB, fSuperTipo, fconteudo_entrar
 
     xElk2 = 0
 
+    fcont_super = 0
+    fcont_super_extra = 0
+
     for xElk in range(len(fconteudo_final_aprender[3])):
+
+        fcont_super = fcont_super_extra
+        fcont_super_extra += 1
 
 
 
         vElk = fconteudo_final_aprender[3][xElk]
 
-        xElk2 = 0
+        vElk2 = vElk
+
+        #xElk2 = 0
 
         if xElk == len(fconteudo_aprender[3]):
             xElk2 = xElk-1
@@ -42,11 +50,11 @@ def fun_resposta(fconteudo_aprender,fParaA, fParaB, fSuperTipo, fconteudo_entrar
         fNumProb2.append(vElk2)
 
         # verificar probabilidade
-        vElkFinal = (1/(vElk/vElk2))*100
+        vElkFinal = ((vElk/vElk2))*10
         print('aqui:', vElkFinal)
         fEsPodeIr = vElkFinal > 50
 
-        if ((fEsPodeIr == True or fEsPodeIrCont < 2) and (fEsPodeIrCont != 0)):
+        if ((fEsPodeIr == True)): #and (fEsPodeIrCont != 0)):
             fconteudo_resposta += str(fconteudo_final_aprender2[2][0][xElk]['vconteudo'])
 
             print('eimx')
@@ -55,12 +63,13 @@ def fun_resposta(fconteudo_aprender,fParaA, fParaB, fSuperTipo, fconteudo_entrar
             fEsPodeIrCont += 1
 
             if fEsPodeIrCont >= 2:
-                fEsPodeIrCont = 1
+                fEsPodeIrCont = 0
+                fEsPodeIr = False
 
 
         else:
             fEsPodeIr = False
-            fEsPodeIrCont = 1
+            fEsPodeIrCont = 0
 
 
 
@@ -70,8 +79,8 @@ def fun_resposta(fconteudo_aprender,fParaA, fParaB, fSuperTipo, fconteudo_entrar
 
 if __name__ == '__main__':
 
-    fconteudo_aprenderT = '1+1= 2 '
-    fconteudo_entrarT = '1+1= '
+    fconteudo_aprenderT = '1+1=2 A+A=B '
+    fconteudo_entrarT = '2+2= '
 
     #
 
