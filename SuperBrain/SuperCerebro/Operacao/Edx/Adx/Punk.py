@@ -55,7 +55,7 @@ def fun_resposta(fconteudo_aprender,fParaA, fParaB, fSuperTipo, fconteudo_entrar
         fEsPodeIr = vElkFinal > 50
 
         if ((fEsPodeIr == True)): #and (fEsPodeIrCont != 0)):
-            fconteudo_resposta += str(fconteudo_final_aprender2[2][0][xElk]['vconteudo'])
+            fconteudo_resposta = str(fconteudo_final_aprender2[2][0][xElk]['vconteudo'])
 
             print('eimx')
 
@@ -80,7 +80,7 @@ def fun_resposta(fconteudo_aprender,fParaA, fParaB, fSuperTipo, fconteudo_entrar
 if __name__ == '__main__':
 
     fconteudo_aprenderT = '1+1=2 A+A=B '
-    fconteudo_entrarT = '2+2= '
+    fconteudo_entrarT = '1+1= '
 
     #
 
