@@ -13,6 +13,7 @@ def fun_resposta(fconteudo_aprender,fParaA, fParaB, fSuperTipo, fconteudo_entrar
     fconteudo_final_entrar2 = iZsx.fun_aprender_diow(fconteudo_entrar, fParaA, fParaB, fSuperTipo)
 
     fconteudo_resposta = ''
+    fconteudo_resposta_lista = []
 
     fNumProb = []
     fNumProb2 = []
@@ -55,7 +56,8 @@ def fun_resposta(fconteudo_aprender,fParaA, fParaB, fSuperTipo, fconteudo_entrar
         fEsPodeIr = vElkFinal > 50
 
         if ((fEsPodeIr == True)): #and (fEsPodeIrCont != 0)):
-            fconteudo_resposta = str(fconteudo_final_aprender2[2][0][xElk]['vconteudo'])
+            #fconteudo_resposta = str(fconteudo_final_aprender2[2][0][xElk]['vconteudo'])
+            #fconteudo_resposta_lista.append(fconteudo_resposta)
 
             print('eimx')
 
@@ -66,21 +68,37 @@ def fun_resposta(fconteudo_aprender,fParaA, fParaB, fSuperTipo, fconteudo_entrar
                 fEsPodeIrCont = 0
                 fEsPodeIr = False
 
+            fconteudo_resposta = str(fconteudo_final_aprender2[2][0][xElk]['vconteudo'])
+            fconteudo_resposta_lista.append(fconteudo_resposta)
+
+
+
 
         else:
             fEsPodeIr = False
             fEsPodeIrCont = 0
 
 
+    fconteudo_resposta_final_super = ''
+
+    for xListax in range(len(fconteudo_resposta_lista)):
+        if fconteudo_entrar.strip() in fconteudo_resposta_lista[xListax]:
+            fconteudo_resposta_final_super = fconteudo_resposta_lista[xListax]
+
+            break
 
 
-    return [0, fconteudo_resposta]
+
+
+
+
+    return [0, fconteudo_resposta, fconteudo_resposta_lista, fconteudo_resposta_final_super]
 
 
 if __name__ == '__main__':
 
-    fconteudo_aprenderT = '1+1=2 A+A=B '
-    fconteudo_entrarT = '1+1= '
+    fconteudo_aprenderT = '1+1=2 A+A=B NOME=GUSTAVO IDADE=18 '
+    fconteudo_entrarT = 'A+A '
 
     #
 
@@ -91,5 +109,5 @@ if __name__ == '__main__':
 
     vEdk = fun_resposta(fconteudo_aprenderT, fLetra_A, fLetra_B, 'vtipo2', fconteudo_entrarT)
 
-    print(vEdk[1])
+    print(vEdk[3])
 
