@@ -57,6 +57,9 @@ def fun_separar(fconteudo: str, fconjunto_tipo: str, fordem_conjuto_tipo: str):
         fTipo = ''
         fTipo_final = ''
 
+        fTipo2 = ''
+        fTipo_final2 = ''
+
         # tipo
 
         for xConjuto_tipo in range(len(vConjutoTipo)):
@@ -66,6 +69,8 @@ def fun_separar(fconteudo: str, fconjunto_tipo: str, fordem_conjuto_tipo: str):
                         fTipo += (vOrdem_conjuto_tipo[xConjuto_tipo]) + ';Sep:' #+ ' ' + tConteudo + ' ' + vConjutoTipo[xConjuto_tipo])
                         fTipo_final += ';tipo:' + vConjutoTipo[xConjuto_tipo]
 
+                        fTipo2 += vOrdem_conjuto_tipo[xConjuto_tipo]
+                        fTipo_final2 += vConjutoTipo[xConjuto_tipo]
 
 
                     else:
@@ -94,7 +99,9 @@ def fun_separar(fconteudo: str, fconjunto_tipo: str, fordem_conjuto_tipo: str):
                 'vquantidade':vQuantidade[-1],
                 'vnome':vNome[-1]['vAprendizado']['vNome'],
                 'vconteudo': vConteudo_final[-2],
-                'vsubtokens':fSubToken
+                'vsubtokens':fSubToken,
+                'vtipo2':float(fTipo2),
+                'vtipo3':fTipo_final2
 
             }
         )
@@ -165,7 +172,7 @@ if __name__ == '__main__':
 
     #
     A = 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z ' + '0 1 2 3 4 5 6 7 8 9 ' + '+ - * / ^ % = ' + '.'
-    B = 'letra_maiuscula '*26 + 'letra_minuscula '*26 + 'numero '*9 + 'operação '*7 + 'lingua'
+    B = '2 '*26 + '3 '*26 + '4 '*9 + '5 '*7 + '6'
     fconteudo = '1 + 1 = 2 O L A'
     fconjuto_tipo = A
     fordem_conjuto_tipo = B
