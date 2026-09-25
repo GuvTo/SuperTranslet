@@ -93,6 +93,9 @@ def fun_separar(fconteudo: str, fconjunto_tipo: str, fordem_conjuto_tipo: str):
 
         vConteudo_final.append(' ')
 
+        # teste
+        print(fTipo2)
+
         vTokens.append(
             {
                 'vtipo':vTipo[-1],

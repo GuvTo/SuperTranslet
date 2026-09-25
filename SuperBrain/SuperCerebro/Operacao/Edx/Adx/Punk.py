@@ -97,8 +97,8 @@ def fun_resposta(fconteudo_aprender,fParaA, fParaB, fSuperTipo, fconteudo_entrar
 
 if __name__ == '__main__':
 
-    fconteudo_aprenderT = '1+1=2 A+A=B NOME=GUSTAVO IDADE=18 NOME=THAINA '
-    fconteudo_entrarT = 'THAINA '
+    fconteudo_aprenderT = '1+1=2 A+A=B NOME=GUSTAVO IDADE=18 NOME=THAINA_ '
+    fconteudo_entrarT = 'A+A '
 
     #
 
@@ -109,5 +109,5 @@ if __name__ == '__main__':
 
     vEdk = fun_resposta(fconteudo_aprenderT, fLetra_A, fLetra_B, 'vtipo2', fconteudo_entrarT)
 
-    print(vEdk[3])
+    print(vEdk[3] + ';')
 
