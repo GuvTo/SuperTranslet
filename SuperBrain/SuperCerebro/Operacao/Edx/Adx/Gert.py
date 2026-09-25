@@ -7,7 +7,7 @@ def fun_varias_resposta(finputs_aprender: list):
         fPrenderT = finputs_aprender[xParaApreder]
 
         #if fPrenderT == ' ':
-        #    continue
+        #    fPrenderT = '_'
 
         fPrenderT_continuacao = fPrenderT.replace(' ', '_')
         vParaAprenderOutPut.append(fPrenderT_continuacao)
@@ -49,25 +49,51 @@ def fun_resposta_final(fconteudo_aprender,fParaA, fParaB, fSuperTipo, fconteudo_
 
     fresposta_TAX = []
 
-    for xaUserEntrar in range(len(fconteudo_entrar_final)):
+    faprenndexx = ''
 
-        #xUserEntrar = xaUserEntrar
+    for xEntrxAprendx in fconteudo_aprender:
+        faprenndexx += fun_varias_resposta(xEntrxAprendx)[1] + ' '
 
-        if xUserEntrar == len(fconteudo_entrar):
-            break
+    for xaUserEntrar in range(len(fconteudo_entrar)):
 
+        xUserEntrar = xaUserEntrar
+        print('uiddj', xUserEntrar)
+
+        '''
+        if xUserEntrar >= len(fconteudo_entrar):
+            xUserEntrar = 0
+            #continue
+
+
+
+        else:
+            xUserEntrar = xaUserEntrar
+            
+            
+        '''
+            
+
+        '''
         if xUserEntrar2 != len(fconteudo_aprender):
-            xUserEntrar2 = xaUserEntrar
+            xUserEntrar2 += 1
 
         if xUserEntrar2 >= len(fconteudo_aprender):
             xUserEntrar2 = 0
-            continue
+            #continue
+
+        #xUserEntrar -= 1
+        #xUserEntrar2 -= 1
+
+        if xUserEntrar2 <= 0:
+            xUserEntrar2 = 0
+            
+        '''
 
         print('ekmwd', xUserEntrar2)
 
-        fresposta_TAX.append(iPunk.fun_resposta(fconteudo_aprender[xUserEntrar2], fParaA, fParaB, fSuperTipo, fconteudo_entrar_final[xUserEntrar] + ' ')[3])
+        fresposta_TAX.append(iPunk.fun_resposta(faprenndexx, fParaA, fParaB, fSuperTipo, fconteudo_entrar[xUserEntrar] + ' ')[3])
 
-        fresposta_total += fresposta_TAX[-1]
+        fresposta_total = str(fresposta_TAX[-1])
 
         print(str(fconteudo_aprender_final) + '+' + fconteudo_entrar_final[xUserEntrar])
 

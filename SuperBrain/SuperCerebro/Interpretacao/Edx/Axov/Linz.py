@@ -174,8 +174,8 @@ if __name__ == '__main__':
         print(f"  A[{i}] = '{elementos_A[i]}'  ->  B[{i}] = '{elementos_B[i]}'")
 
     #
-    A = 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z ' + '0 1 2 3 4 5 6 7 8 9 ' + '+ - * / ^ % = ' + '.'
-    B = '2 '*26 + '3 '*26 + '4 '*9 + '5 '*7 + '6'
+    A = 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z ' + '0 1 2 3 4 5 6 7 8 9 ' + '+ - * / ^ % = ' + '. ? ! _ , [ ]'
+    B = '2 '*26 + '3 '*26 + '4 '*9 + '5 '*7 + '6 7 8 9 10 11 12'
     fconteudo = '1 + 1 = 2 O L A'
     fconjuto_tipo = A
     fordem_conjuto_tipo = B

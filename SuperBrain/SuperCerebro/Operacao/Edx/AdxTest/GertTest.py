@@ -28,7 +28,7 @@ def fun_teste_aprender_total(ffcontend_aprender, ffcontend_entrar):
 
 if __name__ == '__main__':
     vAprender = ['1+1 = 2.', 'A+A = B.']
-    vEntrar = ['1+1', 'A+A ', 'OP', '1+1']
+    vEntrar = ['1+1', 'A+A', 'OP', '1+1']
 
     fun_teste_aprender_total(vAprender, vEntrar)
 
