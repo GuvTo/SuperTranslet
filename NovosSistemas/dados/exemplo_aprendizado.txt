@@ -1,0 +1,5 @@
+ParteA é o conjunto ordenado de caracteres que o sistema reconhece.
+ParteB associa um número de categoria a cada caractere de ParteA, na mesma posição.
+O algoritmo aprende indexando trechos de documentos locais e guardando o caminho da fonte.
+Uma pergunta é respondida com o trecho aprendido mais relevante e com a identificação do arquivo de origem.
+A resposta não é inventada: quando não existe trecho compatível, o sistema informa que não encontrou a informação.

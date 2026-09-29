@@ -1,0 +1,14 @@
+{
+  "versao": 1,
+  "regra": "ParteA é a sequência de caracteres; ParteB contém um número para cada caractere na mesma posição. Os números indicam categoria, não valor semântico nem probabilidade.",
+  "grupos": [
+    {"numero": 1, "nome": "letras maiúsculas", "caracteres": "ABCDEFGHIJKLMNOPQRSTUVWXYZ"},
+    {"numero": 2, "nome": "letras minúsculas", "caracteres": "abcdefghijklmnopqrstuvwxyz"},
+    {"numero": 3, "nome": "algarismos", "caracteres": "0123456789"},
+    {"numero": 4, "nome": "operadores", "caracteres": "+-*/^%="},
+    {"numero": 5, "nome": "pontuação", "caracteres": ".,?!;:"},
+    {"numero": 6, "nome": "espaços em branco", "caracteres_visiveis": ["espaço", "tabulação", "quebra de linha", "retorno de carro"]},
+    {"numero": 7, "nome": "delimitadores e outros sinais", "caracteres": "_[]{}()<>\\|@#$&~`\"'"}
+  ],
+  "observacao": "Letras Unicode acentuadas são classificadas por regra (maiúscula=1, minúscula=2); números Unicode=3; espaços=6. Caracteres desconhecidos recebem código 0. O mapa legado do protótipo original não era alinhado em todas as posições; esta tabela é a versão validada do sistema novo."
+}
